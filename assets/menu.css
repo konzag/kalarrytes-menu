@@ -1,0 +1,47 @@
+/* UIX-03 guest menu page (/menu): phone first, light, self-hosted Commissioner (served from /menu/assets/ so the one
+   public path is /menu), no script. Colours = booking's light identity (brand.css); contrast >= 4.5:1. */
+@font-face { font-family: "Commissioner"; font-weight: 400; font-display: swap;
+  src: url("commissioner-greek-400.woff2") format("woff2"); unicode-range: U+0370-03FF, U+1F00-1FFF; }
+@font-face { font-family: "Commissioner"; font-weight: 400; font-display: swap;
+  src: url("commissioner-latin-400.woff2") format("woff2"); unicode-range: U+0000-00FF, U+2000-206F, U+20AC; }
+@font-face { font-family: "Commissioner"; font-weight: 700; font-display: swap;
+  src: url("commissioner-greek-700.woff2") format("woff2"); unicode-range: U+0370-03FF, U+1F00-1FFF; }
+@font-face { font-family: "Commissioner"; font-weight: 700; font-display: swap;
+  src: url("commissioner-latin-700.woff2") format("woff2"); unicode-range: U+0000-00FF, U+2000-206F, U+20AC; }
+
+:root { color-scheme: light; --bg: #f6efe4; --surface: #fffaf2; --ink: #2b1e16; --muted: #6b5646; --line: #e6d8c6;
+  --accent: #a3431f; --on-accent: #fff; --focus: #1F6FB2; }
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.5 "Commissioner", system-ui, "Segoe UI", Arial, sans-serif;
+  overflow-wrap: anywhere; }
+a { color: var(--accent); }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; border-radius: 6px; }
+.top { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px; background: var(--surface);
+  border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 2; }
+h1 { margin: 0; font-size: 1.6rem; line-height: 1.2; }
+.sub { margin: 0; color: var(--muted); font-size: .95rem; }
+.lang { display: flex; border: 1px solid var(--muted); border-radius: 10px; overflow: hidden; flex: none; }
+.lang a { display: inline-flex; align-items: center; justify-content: center; min-width: 48px; min-height: 48px; padding: 0 10px;
+  color: var(--ink); text-decoration: none; font-weight: 700; }
+.lang a + a { border-left: 1px solid var(--muted); }
+.lang a[aria-current="true"] { background: var(--accent); color: var(--on-accent); }
+main { max-width: 720px; margin: 0 auto; padding: 16px; }
+.cat-nav { list-style: none; margin: 0 0 8px; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px; border: 1px solid var(--line);
+  border-radius: 999px; background: var(--surface); color: var(--ink); text-decoration: none; font-weight: 700; }
+.category { scroll-margin-top: 96px; margin-top: 20px; }
+h2 { font-size: 1.3rem; margin: 0 0 8px; color: var(--accent); }
+.dishes { list-style: none; margin: 0; padding: 0; background: var(--surface); border-radius: 14px; border: 1px solid var(--line); }
+.dish { padding: 12px 14px; border-bottom: 1px solid var(--line); }
+.dish:last-child { border-bottom: 0; }
+.dish-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.dish-name { margin: 0; font-size: 1.05rem; }
+.price { font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.dish-desc { margin: 4px 0 0; color: var(--muted); }
+.allergens, .legend { list-style: none; margin: 6px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: .9rem; color: var(--muted); }
+.legend-box { margin-top: 28px; padding: 14px; background: var(--surface); border-radius: 14px; border: 1px solid var(--line); }
+.note { color: var(--muted); margin: 8px 0; }
+.notice { padding: 14px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; }
+.foot { max-width: 720px; margin: 0 auto; padding: 8px 16px 32px; color: var(--muted); font-size: .85rem; }
+.foot p { margin: 4px 0; }
