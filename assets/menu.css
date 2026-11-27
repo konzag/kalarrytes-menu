@@ -39,6 +39,7 @@ h2 { font-size: 1.3rem; margin: 0 0 8px; color: var(--accent); }
 .dish-name { margin: 0; font-size: 1.05rem; }
 .price { font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
 .dish-desc { margin: 4px 0 0; color: var(--muted); }
+.cat-note { margin: 0 0 8px; color: var(--muted); }
 .allergens, .legend { list-style: none; margin: 6px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: .9rem; color: var(--muted); }
 .legend-box { margin-top: 28px; padding: 14px; background: var(--surface); border-radius: 14px; border: 1px solid var(--line); }
 .note { color: var(--muted); margin: 8px 0; }
